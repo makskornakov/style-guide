@@ -1,9 +1,9 @@
-import { css } from '@linaria/core'
-import { styled } from '@linaria/react'
+import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
-import { media } from './utils/media-queries'
+import { media } from './utils/media-queries';
 
-const transitionDurationDefault = '200ms'
+const transitionDurationDefault = '200ms';
 
 export const Main = styled.main`
   display: flex;
@@ -12,7 +12,7 @@ export const Main = styled.main`
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-`
+`;
 
 export const Description = styled.div`
   display: inherit;
@@ -81,12 +81,12 @@ export const Description = styled.div`
       z-index: 1;
     }
   }
-`
+`;
 
 export const Code = styled.code`
   font-weight: 700;
   font-family: var(--font-mono);
-`
+`;
 
 function getGridTemplateColumnsMinMax(numColumns: number) {
   return `repeat(${numColumns}, minmax(${100 / numColumns}%, auto))`;
@@ -111,7 +111,7 @@ export const Grid = styled.div`
   ${media.tabletAndSmallerDesktopStyle} {
     grid-template-columns: ${getGridTemplateColumnsRepeat(2)};
   }
-`
+`;
 
 export const Card = styled.a`
   padding: 1rem 1.2rem;
@@ -162,7 +162,7 @@ export const Card = styled.a`
       margin-bottom: 0.5rem;
     }
   }
-`
+`;
 
 export const Center = styled.div`
   display: flex;
@@ -203,7 +203,13 @@ export const Center = styled.div`
       height: 300px;
     }
   }
-`
+`;
+
+export const TheH = styled.h1`
+  font-size: 2rem;
+  color: darkblue;
+  font-weight: 300;
+`;
 
 export const logo = css`
   position: relative;
@@ -211,10 +217,10 @@ export const logo = css`
   ${media.prefersColorSchemeDark} {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
-`
+`;
 
 export const vercelLogo = css`
   ${media.prefersColorSchemeDark} {
     filter: invert(1);
   }
-`
+`;
