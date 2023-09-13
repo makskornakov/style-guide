@@ -209,6 +209,7 @@ export const TheH = styled.h1`
   font-size: 2rem;
   color: darkblue;
   font-weight: 300;
+  font-family: 'Inter', sans-serif;
 `;
 
 export const logo = css`
