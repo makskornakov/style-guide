@@ -10,6 +10,12 @@ export const globals = css`
       font-family: 'New Sun Regular';
       src: url('./static/New Sun Regular.ttf') format('truetype');
     }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      src: url(https://rsms.me/inter/font-files/Inter.var.woff2?v=3.19) format('woff2');
+    }
 
     :root {
       --max-width: 1100px;
@@ -24,6 +30,8 @@ export const globals = css`
       box-sizing: border-box;
       padding: 0;
       margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
     }
 
     html,
@@ -50,6 +58,19 @@ export const globals = css`
     h5,
     h6 {
       font-family: 'New Sun Regular', sans-serif;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 18px;
     }
   }
 `;

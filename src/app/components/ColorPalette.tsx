@@ -1,3 +1,5 @@
+import { Section } from '../page.styled';
+
 interface Color {
   name: string;
   hex: string;
@@ -14,11 +16,18 @@ const palette: Palette = [
 
 export default function ColorPalette() {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <Section
+      style={{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+        columnGap: '1.5rem',
+      }}
+    >
       {palette.map((color) => (
         <ColorBlock key={color.name} {...color} />
       ))}
-    </div>
+    </Section>
   );
 }
 
@@ -26,10 +35,12 @@ function ColorBlock({ name, hex }: Color) {
   return (
     <div
       style={{
+        // outline: '1px solid red',
+
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        margin: '1rem',
+        // margin: '1rem',
       }}
     >
       <div
