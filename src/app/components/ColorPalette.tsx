@@ -1,4 +1,4 @@
-import { Section } from '../page.styled';
+// import { Section } from '../page.styled';
 
 interface Color {
   name: string;
@@ -6,28 +6,29 @@ interface Color {
 }
 type Palette = Color[];
 
-const palette: Palette = [
-  { name: 'Rich Black', hex: '#0C151D' },
-  { name: 'Indigo dye', hex: '#344966' },
-  { name: 'Uranian Blue', hex: '#A0DDFF' },
-  { name: 'White smoke', hex: '#F5F4F6' },
-  { name: 'Atomic tangerine', hex: '#F78D50' },
-];
+// const palette: Palette = [
+//   { name: 'Rich Black', hex: '#0C151D' },
+//   { name: 'Indigo dye', hex: '#344966' },
+//   { name: 'Uranian Blue', hex: '#A0DDFF' },
+//   { name: 'White smoke', hex: '#F5F4F6' },
+//   { name: 'Atomic tangerine', hex: '#F78D50' },
+// ];
 
-export default function ColorPalette() {
+export default function ColorPalette({ palette }: { palette: Palette }) {
   return (
-    <Section
+    <div
       style={{
         flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'flex-start',
+        display: 'flex',
+        paddingBottom: '1rem',
+        borderBottom: '1.5px solid black',
         columnGap: '1.5rem',
       }}
     >
       {palette.map((color) => (
         <ColorBlock key={color.name} {...color} />
       ))}
-    </Section>
+    </div>
   );
 }
 
@@ -36,11 +37,13 @@ function ColorBlock({ name, hex }: Color) {
     <div
       style={{
         // outline: '1px solid red',
-
+        width: '7rem',
+        textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         // margin: '1rem',
+        rowGap: '0.5rem',
       }}
     >
       <div

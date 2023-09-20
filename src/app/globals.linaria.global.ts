@@ -6,17 +6,6 @@ import { reset } from './utils/reset';
 
 export const globals = css`
   :global() {
-    @font-face {
-      font-family: 'New Sun Regular';
-      src: url('./static/New Sun Regular.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      src: url(https://rsms.me/inter/font-files/Inter.var.woff2?v=3.19) format('woff2');
-    }
-
     :root {
       --max-width: 1100px;
       --border-radius: 12px;
@@ -40,24 +29,18 @@ export const globals = css`
       overflow-x: hidden;
     }
     main {
-      padding: 0.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     body {
-      color: rgb(var(--foreground-rgb));
-      background: rgb(var(--background-rgb));
+      color: rgb(var(--foreground-color));
+      background: rgb(var(--background-color));
     }
 
     a {
       ${reset.a}
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'New Sun Regular', sans-serif;
     }
 
     h1 {
